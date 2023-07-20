@@ -1,0 +1,29 @@
+Form {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+input {
+  height: 30px;
+  width: 40vw;
+  margin: 0.5rem;
+}
+
+input[type="radio"] {
+  border-radius: 15px;
+  cursor: pointer;
+  display: inline-block;
+  height: 20px;
+  margin-right: 15px;
+  position: relative;
+  width: 20px;
+
+}
+
+.input-groups {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}

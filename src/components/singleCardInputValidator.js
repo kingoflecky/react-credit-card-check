@@ -1,22 +1,22 @@
+import ValidateCred from "./validateCred";
+
 // Takes user input in the check single card form. Iterates each digit.
 // Calls validateCred function to rtn true || false
 // Fnc rtns an alert.
-const SingleCardInputValidator = (userInputCardNum) => {
-  let singleInputArray = [];
+const SingleCardInputValidator = ({cardNum, fullName, bankName}) => {
+  let singleInputArray = [...cardNum];
 
-  for (const i of userInputCardNum) {
-    singleInputArray.push(i);
-  }
+  const checkUserCard = ValidateCred(singleInputArray);
 
-  const checkUserCard = validateCred(singleInputArray);
-
+  console.log(singleInputArray, checkUserCard)
+  
   if (checkUserCard) {
     return alert(
-      `${userFullName}, your card number is valid. Your bank is: ${userBankName}`
+      `${fullName}, your card number is valid. Your bank is: ${bankName}`
     );
   } else {
     return alert(
-      `${userFullName}, your card number is invalid. Please contact ${userBankName}, your card issuer.`
+      `${fullName}, your card number is invalid. Please contact ${bankName}, your card issuer.`
     );
   }
 };

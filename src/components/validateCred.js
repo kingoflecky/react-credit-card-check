@@ -5,7 +5,7 @@ import {
   SumTotal,
   GetModulo,
   IsValid,
-} from "ValidatorAlgorithm.js";
+} from "./validatorAlgorithm.js";
 
 const ValidateCred = (array) => {
   // Function to call the above function. Returns True or False.
