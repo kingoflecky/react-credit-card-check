@@ -1,5 +1,6 @@
 import { Formik, Field, Form } from "formik";
 import SingleCardForm from "../pages/formPages/singleCardForm";
+import CardBatchForm from "./cardBatchForm";
 
 const RenderFirstRadioQuestion = () => {
 
@@ -39,7 +40,7 @@ const RenderFirstRadioQuestion = () => {
             </div>
           </div>
           
-          {values.firstQuestRadio === "single-card" ? <SingleCardForm /> : null}
+          {values.firstQuestRadio === "single-card" ? <SingleCardForm /> : <CardBatchForm />}
         </div>
       )}
       
