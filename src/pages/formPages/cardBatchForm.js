@@ -1,15 +1,15 @@
 import { Formik, Form, Field, useFormik } from "formik";
-import "../css/cardBatchForm.css";
+import "../../css/cardBatchForm.css";
+import CardBatchInputValidator from "../../components/cardBatchInputValidator";
 
 const CardBatchForm = () => {
-
   const manageState = useFormik({
     initialValues: {
-      cardBatchNums: '',
-    }, 
-    onSubmit: values => {
-      // SingleCardInputValidator(values);
-    }, 
+      cardBatchNums: "",
+    },
+    onSubmit: (values) => {
+      CardBatchInputValidator(values);
+    },
   });
 
   return (
@@ -32,16 +32,11 @@ const CardBatchForm = () => {
                 placeholder="Enter batch of card numbers here"
                 onChange={manageState.handleChange}
                 value={manageState.values.cardBatchNums}
-
               />
             </label>
           </div>
 
-          <button 
-            id="submitBtn" 
-            type="submit" 
-            value="Check Card Batch"
-          >
+          <button id="submitBtn" type="submit" value="Check Card Batch">
             Submit
           </button>
         </Form>

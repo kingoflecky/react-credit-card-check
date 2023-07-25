@@ -2,10 +2,10 @@ import FindInvalidCards from "./findInvalidCards";
 
 // Takes the invalidCards array and iterates to determine
 // which companies issued invalid cards.
-const IdInvalidCardCompanies = (FindInvalidCards) => {
+const IdInvalidCardCompanies = (array) => {
   let companyNames = [];
   let firstNum = [];
-  let invalids = FindInvalidCards(batch);
+  let invalids = FindInvalidCards(array);
   const arrayCopy = [...invalids];
 
   arrayCopy.forEach(function (i) {

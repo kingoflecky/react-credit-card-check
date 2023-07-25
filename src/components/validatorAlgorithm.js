@@ -1,5 +1,5 @@
+// Below functions set up validation algorithm
 
-// Below functions set up validation algorithm 
 export const CloneArray = (array) => {
   let cloneArray = array.slice(0); // copy the whole `array`
   return cloneArray;
@@ -25,9 +25,7 @@ export const Minus9Check = (doubledNums) => {
 };
 
 export const SumTotal = (array) => {
-
-  const total = array.reduce(
-    (a, b) => a + Number(b), 0);
+  const total = array.reduce((a, b) => a + Number(b), 0);
   return total;
 };
 

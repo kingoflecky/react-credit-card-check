@@ -1,19 +1,19 @@
-import ValidateCred from "./validateCred";
+import ValidateCredBatch from "./validateCredBatch";
 
-const FindInvalidCards = (arrayBatch) => {
+export const FindInvalidCards = (arrayBatch) => {
   // Takes a batch of card numbers, iterates through
   // & determines valid || invalid.
   let validCards = [];
   let invalidCards = [];
 
   for (const i of arrayBatch) {
-    if (ValidateCred(i)) {
+    if (ValidateCredBatch(i)) {
       validCards.push(JSON.stringify(i));
-    } else if (!ValidateCred(i)) {
+    } else if (!ValidateCredBatch(i)) {
       invalidCards.push(JSON.stringify(i));
     }
   }
   return invalidCards;
 };
 
-export default FindInvalidCards;
+export default FindInvalidCards
