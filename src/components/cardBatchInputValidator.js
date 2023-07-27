@@ -2,15 +2,31 @@ import FindInvalidCards from "./findInvalidCards";
 import IdInvalidCardCompanies from "./findInvalidCompanies.js";
 
 const CardBatchInputValidator = ({ cardBatchNums }) => {
-  let arrayBatch = [...cardBatchNums.split(',').map(s => s.trim())];
-  console.log(arrayBatch)
+  console.log(cardBatchNums);
+  const arrayBatch = [...cardBatchNums.split(",").map((s) => s.trim())];
 
-  const invalidCards = FindInvalidCards(arrayBatch);
+  const strToArray = arrayBatch.map(str => str.split(""));
+  console.log(strToArray);
+
+  const invalidCards = FindInvalidCards(strToArray);
   console.log("invalidCards: " + invalidCards);
+
+  const rejoinInvalids = invalidCards.map(str => str.join(""));
+  console.log(rejoinInvalids);
+
   const cardCompanyId = IdInvalidCardCompanies(invalidCards);
   console.log("companyId: " + cardCompanyId);
 
-  return invalidCards, cardCompanyId;
-};
+  if (rejoinInvalids.length > 0) {
+    return alert(
+      `Your invalid card numbers are as follows: ${rejoinInvalids}`
+    );
+  } else {
+    return alert(
+      `All provided card numbers are valid.`
+    );
+  }
+}
+
 
 export default CardBatchInputValidator;

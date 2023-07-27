@@ -5,8 +5,8 @@ import FindInvalidCards from "./findInvalidCards";
 const IdInvalidCardCompanies = (array) => {
   let companyNames = [];
   let firstNum = [];
-  let invalids = FindInvalidCards(array);
-  const arrayCopy = [...invalids];
+  //let invalids = FindInvalidCards(array);
+  const arrayCopy = [...array];
 
   arrayCopy.forEach(function (i) {
     if (!firstNum.includes(i[1])) {

@@ -1,5 +1,4 @@
 // Below functions set up validation algorithm
-
 export const CloneArray = (array) => {
   let cloneArray = array.slice(0); // copy the whole `array`
   return cloneArray;
