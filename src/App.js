@@ -1,10 +1,12 @@
-import './App.css';
-import HowCanWeHelp from './pages/formPages/howCanWeHelp';
+import "./App.css";
+import HowCanWeHelp from "./pages/formPages/howCanWeHelp";
+import LoginPage from "./pages/formPages/loginPage";
 
 function App() {
   return (
     <div className="App">
-     <HowCanWeHelp />
+      <LoginPage />
+      <HowCanWeHelp />
     </div>
   );
 }
