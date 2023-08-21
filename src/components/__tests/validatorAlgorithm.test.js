@@ -1,4 +1,11 @@
-import { CloneArray, DoubleEveryOtherNum, Minus9Check, SumTotal, GetModulo, IsValid } from "../validatorAlgorithm";
+import {
+  CloneArray,
+  DoubleEveryOtherNum,
+  Minus9Check,
+  SumTotal,
+  GetModulo,
+  IsValid,
+} from "../validatorAlgorithm";
 
 describe("validatorAlgorithm behaves correctly when", () => {
   it("CloneArray fn returns a cloned array", () => {
@@ -10,7 +17,6 @@ describe("validatorAlgorithm behaves correctly when", () => {
     expect(actualArray).toEqual(expectedArray);
   });
 
-
   it("DoubleEveryOtherNum returns new, reversed, array with every 2nd number doubled", () => {
     const testArray = [4, 5, 3, 9, 6, 7, 7, 9, 0, 8, 0, 1, 6, 8, 0, 8];
     const expectedArray = [8, 0, 8, 12, 1, 0, 8, 0, 9, 14, 7, 12, 9, 6, 5, 8];
@@ -19,7 +25,6 @@ describe("validatorAlgorithm behaves correctly when", () => {
 
     expect(actualArray).toEqual(expectedArray);
   });
-
 
   it("Minus9Check returns new array with all digits =<9", () => {
     const testArray = [8, 0, 8, 12, 1, 0, 8, 0, 9, 14, 7, 12, 9, 6, 5, 8];
@@ -38,7 +43,7 @@ describe("validatorAlgorithm behaves correctly when", () => {
 
     expect(actualNumber).toEqual(expectedNumber);
   });
-  
+
   it("GetModulo returns no remainder of SumTotal/10", () => {
     const testInputNumber = 80;
     const expectedNumber = 0;
@@ -74,5 +79,4 @@ describe("validatorAlgorithm behaves correctly when", () => {
 
     expect(actualResult).toEqual(expectedResult);
   });
-
 });
