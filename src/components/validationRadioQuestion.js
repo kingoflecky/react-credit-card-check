@@ -1,4 +1,4 @@
-import { Formik, Field, Form } from "formik";
+import { Formik, Field } from "formik";
 import CardBatchForm from "../pages/formPages/cardBatchForm";
 import SingleCardForm from "../pages/formPages/singleCardForm";
 
@@ -15,7 +15,7 @@ const RenderFirstRadioQuestion = () => {
           <div id="my-radio-group">
             <p>What would you like to validate?</p>
           </div>
-          <div role="group">
+          <div role="group" id="radio-question-group">
             <div className="radio-button-and-label">
               <label>
                 <Field
