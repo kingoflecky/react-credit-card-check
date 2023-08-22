@@ -28,5 +28,4 @@ const CardBatchInputValidator = ({ cardBatchNums }) => {
   }
 }
 
-
 export default CardBatchInputValidator;
