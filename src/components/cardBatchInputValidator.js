@@ -1,5 +1,5 @@
-import FindInvalidCards from "./findInvalidCards";
-import IdInvalidCardCompanies from "./findInvalidCompanies.js";
+import FindInvalidCards from "./factory/findInvalidCards";
+import IdInvalidCardCompanies from "./factory/findInvalidCompanies.js";
 
 const CardBatchInputValidator = ({ cardBatchNums }) => {
   console.log(cardBatchNums);
